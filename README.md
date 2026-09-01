@@ -1,6 +1,6 @@
 # Alif Laam Meem Jewellers — Landing Page
 
-A luxury single-page landing site for **Alif Laam Meem Jewellers** — hallmarked gold, bridal sets, silver & gemstone jewellery.
+A luxury single-page landing site for **Alif Laam Meem Jewellers** — 21K & 22K gold, bridal sets, silver & gemstone jewellery.
 
 ## Live details wired into the page
 
