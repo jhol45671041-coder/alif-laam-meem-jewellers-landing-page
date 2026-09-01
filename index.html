@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alif Laam Meem Jewellers — Hallmarked Gold &amp; Bridal Jewellery, Karachi</title>
+  <meta name="description" content="Alif Laam Meem Jewellers — certified hallmarked 21K & 22K gold, bridal sets, silver & gemstone jewellery in Karachi. Custom design, repair, gold exchange & free home delivery." />
+  <meta name="keywords" content="gold jewellery Karachi, bridal jewellery, 21K gold, 22K gold, hallmarked gold, Alif Laam Meem Jewellers" />
+  <meta name="theme-color" content="#0a2e24" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alif Laam Meem Jewellers — Timeless Gold & Bridal Jewellery" />
+  <meta property="og:description" content="Certified hallmarked gold, bridal sets, silver & gemstone jewellery. Custom design, repair & free delivery across Karachi." />
+  <meta property="og:image" content="assets/images/hero.jpg" />
+  <meta property="og:url" content="https://aliflaammeem.pk/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a2e24'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='30' fill='%23d4af37' text-anchor='middle'%3Eالم%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Alif Laam Meem Jewellers",
+    "image": "assets/images/hero.jpg",
+    "telephone": "+92-300-1234567",
+    "email": "hello@aliflaammeem.pk",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop 12–14, Gold Souk, Tariq Road",
+      "addressLocality": "Karachi",
+      "addressCountry": "PK"
+    },
+    "openingHours": "Mo-Sa 11:00-21:00",
+    "sameAs": [
+      "https://www.facebook.com/aliflaammeem",
+      "https://www.instagram.com/aliflaammeem",
+      "https://www.youtube.com/@aliflaammeem"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ============ Design tokens ============ */
+    :root {
+      --green-950: #06231b;
+      --green-900: #0a2e24;
+      --green-800: #0f4436;
+      --green-700: #14604c;
+      --green-100: #e2ede7;
+      --gold: #d4af37;
+      --gold-light: #e9d8a6;
+      --gold-dark: #a07c1f;
+      --cream: #faf6ec;
+      --cream-2: #f3ecdc;
+      --ink: #1d1b16;
+      --muted: #6f6a5e;
+      --white: #ffffff;
+      --line: rgba(212, 175, 55, 0.28);
+      --shadow: 0 24px 60px -24px rgba(6, 35, 27, 0.45);
+      --radius: 18px;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', 'Segoe UI', sans-serif;
+      --arabic: 'Amiri', serif;
+    }
+
+    /* ============ Reset ============ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    section { position: relative; }
+
+    .container { width: min(1180px, 92%); margin-inline: auto; }
+
+    /* ============ Typography helpers ============ */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gold-dark);
+    }
+    .eyebrow::before, .eyebrow.center::after {
+      content: ""; width: 34px; height: 1px; background: var(--gold);
+    }
+    .section-title {
+      font-family: var(--serif); font-weight: 600;
+      font-size: clamp(2rem, 4.4vw, 3.1rem);
+      line-height: 1.12; margin: 14px 0 16px; color: var(--green-900);
+    }
+    .section-title em { font-style: italic; color: var(--gold-dark); }
+    .section-lead { max-width: 620px; color: var(--muted); font-size: 1.05rem; }
+    .center { text-align: center; }
+    .center .section-lead { margin-inline: auto; }
+
+    /* ============ Buttons ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 30px; border-radius: 999px;
+      font-weight: 600; font-size: 0.95rem; letter-spacing: 0.04em;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+      will-change: transform;
+    }
+    .btn svg { width: 17px; height: 17px; flex: none; }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+      color: var(--green-950); box-shadow: 0 14px 30px -12px rgba(212, 175, 55, 0.65);
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 20px 38px -12px rgba(212, 175, 55, 0.8); }
+    .btn-outline { border: 1.5px solid var(--gold); color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--green-950); transform: translateY(-3px); }
+    .btn-dark { background: var(--green-900); color: var(--cream); }
+    .btn-dark:hover { background: var(--green-700); transform: translateY(-3px); }
+    .btn-light { background: var(--cream); color: var(--green-900); }
+    .btn-light:hover { background: var(--white); transform: translateY(-3px); }
+
+    /* ============ Top bar ============ */
+    .topbar {
+      background: var(--green-950); color: #cfd8cf;
+      font-size: 0.82rem; letter-spacing: 0.03em;
+      position: relative; z-index: 60;
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 9px 0; flex-wrap: wrap;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .topbar-left a { display: inline-flex; align-items: center; gap: 7px; transition: color 0.25s; }
+    .topbar-left a:hover { color: var(--gold-light); }
+    .topbar-left svg { width: 14px; height: 14px; stroke: var(--gold); }
+    .topbar-socials { display: flex; gap: 6px; }
+    .topbar-socials a {
+      display: grid; place-items: center; width: 28px; height: 28px;
+      border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 50%;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .topbar-socials a:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
+    .topbar-socials a:hover svg { stroke: var(--green-950); }
+    .topbar-socials svg { width: 13px; height: 13px; stroke: var(--gold-light); }
+
+    /* ============ Header ============ */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(250, 246, 236, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+    .site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 10px 30px -18px rgba(6, 35, 27, 0.35); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark {
+      width: 48px; height: 48px; flex: none; border-radius: 12px;
+      background: linear-gradient(145deg, var(--green-800), var(--green-950));
+      display: grid; place-items: center;
+      font-family: var(--arabic); color: var(--gold-light); font-size: 1.35rem;
+      box-shadow: inset 0 0 0 1.5px var(--line), var(--shadow);
+    }
+    .brand-text { line-height: 1.15; }
+    .brand-text strong {
+      display: block; font-family: var(--serif); font-size: 1.22rem;
+      font-weight: 700; letter-spacing: 0.02em; color: var(--green-900);
+    }
+    .brand-text span { font-size: 0.68rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold-dark); font-weight: 600; }
+
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      position: relative; padding: 10px 15px; font-weight: 500; font-size: 0.98rem;
+      color: var(--green-900); transition: color 0.25s;
+    }
+    .nav-links a::after {
+      content: ""; position: absolute; left: 15px; right: 100%; bottom: 4px; height: 2px;
+      background: var(--gold); transition: right 0.3s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); }
+    .nav-links a:hover::after, .nav-links a.active::after { right: 15px; }
+
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .nav-cta .btn { padding: 11px 22px; font-size: 0.88rem; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      width: 44px; height: 44px; border-radius: 12px;
+      border: 1px solid var(--line); align-items: center; justify-content: center;
+    }
+    .hamburger span { width: 20px; height: 2px; background: var(--green-900); transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none; position: fixed; inset: 0 0 0 0; z-index: 45;
+      background: linear-gradient(160deg, var(--green-950), var(--green-900));
+      padding: 120px 8% 40px; overflow-y: auto;
+    }
+    .mobile-menu.open { display: block; animation: fadeIn 0.35s ease; }
+    .mobile-menu a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 4px; border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+      font-family: var(--serif); font-size: 1.6rem; color: var(--cream);
+      transition: color 0.25s, padding-left 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold-light); padding-left: 12px; }
+    .mobile-menu .btn { margin-top: 28px; width: 100%; justify-content: center; }
+    .mobile-menu small { display: block; margin-top: 26px; text-align: center; color: #9db3a8; font-size: 0.85rem; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ============ Hero ============ */
+    .hero {
+      background:
+        radial-gradient(1100px 520px at 85% -10%, rgba(212, 175, 55, 0.16), transparent 60%),
+        linear-gradient(170deg, var(--green-950) 0%, var(--green-900) 55%, var(--green-800) 100%);
+      color: var(--cream); overflow: hidden;
+    }
+    .hero::before {
+      content: "الم"; position: absolute; right: -4%; top: 8%;
+      font-family: var(--arabic); font-size: clamp(10rem, 30vw, 24rem);
+      color: rgba(212, 175, 55, 0.06); pointer-events: none; line-height: 1;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px; align-items: center; padding: 84px 0 96px; position: relative;
+    }
+    .hero-copy .eyebrow { color: var(--gold-light); }
+    .hero-copy .eyebrow::before { background: var(--gold); }
+    .hero-copy h1 {
+      font-family: var(--serif); font-weight: 600;
+      font-size: clamp(2.6rem, 5.6vw, 4.3rem); line-height: 1.06;
+      margin: 18px 0 22px;
+    }
+    .hero-copy h1 em {
+      font-style: italic;
+      background: linear-gradient(120deg, var(--gold-light), var(--gold) 60%, var(--gold-dark));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-copy p { max-width: 520px; color: #c8d4cc; font-size: 1.08rem; font-weight: 300; }
+    .hero-actions { display: flex; gap: 16px; margin-top: 34px; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex; gap: 38px; margin-top: 52px; flex-wrap: wrap;
+      border-top: 1px solid rgba(212, 175, 55, 0.22); padding-top: 28px;
+    }
+    .hero-stat b {
+      font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--gold-light);
+      display: block; line-height: 1;
+    }
+    .hero-stat span { font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: #9db3a8; }
+
+    .hero-visual { position: relative; }
+    .hero-frame {
+      position: relative; border-radius: var(--radius);
+      padding: 14px; background: linear-gradient(140deg, var(--gold-light), var(--gold) 45%, var(--gold-dark));
+      box-shadow: var(--shadow); transform: rotate(2deg);
+    }
+    .hero-frame::after {
+      content: ""; position: absolute; inset: -18px; z-index: -1;
+      border: 1px solid rgba(212, 175, 55, 0.3); border-radius: calc(var(--radius) + 10px);
+    }
+    .hero-frame img {
+      width: 100%; height: 480px; object-fit: cover; border-radius: 12px;
+    }
+    .hero-badge {
+      position: absolute; left: -26px; bottom: 34px;
+      background: var(--cream); color: var(--green-900);
+      border-radius: 14px; padding: 16px 22px; box-shadow: var(--shadow);
+      display: flex; align-items: center; gap: 14px; animation: float 5s ease-in-out infinite;
+    }
+    .hero-badge svg { width: 30px; height: 30px; stroke: var(--gold-dark); flex: none; }
+    .hero-badge strong { display: block; font-family: var(--serif); font-size: 1.02rem; }
+    .hero-badge small { color: var(--muted); font-size: 0.78rem; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    .scroll-hint {
+      position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      color: #9db3a8; font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
+    }
+    .scroll-hint span { width: 1px; height: 34px; background: linear-gradient(var(--gold), transparent); animation: drip 2s ease-in-out infinite; }
+    @keyframes drip { 0% { transform: scaleY(0); transform-origin: top; } 45% { transform: scaleY(1); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+
+    /* ============ Marquee ============ */
+    .marquee {
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+      color: var(--green-950); overflow: hidden; padding: 13px 0;
+    }
+    .marquee-track { display: flex; gap: 48px; width: max-content; animation: scroll 28s linear infinite; }
+    .marquee span { display: inline-flex; align-items: center; gap: 48px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.24em; text-transform: uppercase; white-space: nowrap; }
+    .marquee i { font-style: normal; color: var(--green-900); }
+    @keyframes scroll { to { transform: translateX(-50%); } }
+
+    /* ============ About ============ */
+    .about { padding: 110px 0 90px; background: var(--cream); }
+    .about-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 64px; align-items: center; }
+    .about-visual { position: relative; }
+    .about-visual img { border-radius: var(--radius); box-shadow: var(--shadow); height: 520px; width: 100%; object-fit: cover; }
+    .about-visual::before {
+      content: ""; position: absolute; inset: -22px auto auto -22px; width: 46%; height: 46%;
+      border: 1.5px solid var(--gold); border-right: none; border-bottom: none;
+      border-radius: var(--radius) 0 0 0; z-index: -1;
+    }
+    .exp-card {
+      position: absolute; right: -20px; bottom: 34px;
+      background: var(--green-900); color: var(--cream);
+      border-radius: 16px; padding: 22px 28px; box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+    .exp-card b { font-family: var(--serif); font-size: 2.6rem; font-weight: 600; color: var(--gold-light); display: block; line-height: 1; }
+    .exp-card span { font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b9c9c0; }
+
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    .about-feature { display: flex; gap: 14px; align-items: flex-start; }
+    .about-feature svg { width: 26px; height: 26px; stroke: var(--gold-dark); flex: none; margin-top: 4px; }
+    .about-feature strong { font-family: var(--serif); font-size: 1.12rem; color: var(--green-900); display: block; line-height: 1.3; }
+    .about-feature p { font-size: 0.9rem; color: var(--muted); }
+    .about-actions { margin-top: 34px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .signature { margin-top: 30px; display: flex; align-items: center; gap: 16px; }
+    .signature b { font-family: var(--serif); font-size: 1.5rem; color: var(--gold-dark); font-weight: 500; }
+    .signature small { display: block; color: var(--muted); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; }
+
+    /* ============ Collections ============ */
+    .collections { padding: 100px 0 110px; background: linear-gradient(180deg, var(--cream-2), var(--cream)); }
+    .filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 38px 0 46px; }
+    .filter-btn {
+      padding: 10px 24px; border-radius: 999px; border: 1px solid var(--line);
+      font-weight: 500; font-size: 0.92rem; color: var(--green-800);
+      transition: all 0.3s; background: var(--cream);
+    }
+    .filter-btn:hover { border-color: var(--gold); color: var(--gold-dark); }
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold) 60%, var(--gold-dark));
+      color: var(--green-950); border-color: transparent; font-weight: 600;
+      box-shadow: 0 12px 26px -12px rgba(212, 175, 55, 0.7);
+    }
+    .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .collection-card {
+      background: var(--white); border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 18px 44px -26px rgba(6, 35, 27, 0.4);
+      transition: transform 0.35s, box-shadow 0.35s; display: none;
+    }
+    .collection-card.show { display: block; animation: cardIn 0.5s ease both; }
+    @keyframes cardIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    .collection-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -26px rgba(6, 35, 27, 0.5); }
+    .card-media { position: relative; overflow: hidden; }
+    .card-media img { width: 100%; height: 300px; object-fit: cover; transition: transform 0.6s; }
+    .collection-card:hover .card-media img { transform: scale(1.07); }
+    .card-tag {
+      position: absolute; top: 16px; left: 16px;
+      background: rgba(6, 35, 27, 0.82); backdrop-filter: blur(6px);
+      color: var(--gold-light); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 7px 14px; border-radius: 999px;
+    }
+    .card-body { padding: 24px 26px 28px; }
+    .card-body h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: var(--green-900); }
+    .card-body p { color: var(--muted); font-size: 0.92rem; margin: 8px 0 18px; }
+    .card-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 999px; font-size: 0.86rem; font-weight: 600;
+      border: 1.5px solid var(--green-800); color: var(--green-800);
+      transition: all 0.3s;
+    }
+    .card-link svg { width: 15px; height: 15px; }
+    .card-link:hover { background: var(--green-800); color: var(--cream); transform: translateY(-2px); }
+    .card-link.gold { border-color: var(--gold); color: var(--gold-dark); }
+    .card-link.gold:hover { background: var(--gold); color: var(--green-950); }
+    .view-all { text-align: center; margin-top: 48px; }
+
+    /* ============ Services ============ */
+    .services { padding: 110px 0; background: var(--green-950); color: var(--cream); position: relative; overflow: hidden; }
+    .services::before {
+      content: "✦"; position: absolute; right: -60px; top: -60px; font-size: 22rem;
+      color: rgba(212, 175, 55, 0.05); line-height: 1;
+    }
+    .services .section-title { color: var(--cream); }
+    .services .eyebrow { color: var(--gold-light); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; position: relative; }
+    .service-card {
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: var(--radius); padding: 34px 30px;
+      transition: transform 0.35s, background 0.35s, border-color 0.35s;
+    }
+    .service-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.08); border-color: var(--gold); }
+    .service-icon {
+      width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center;
+      background: linear-gradient(145deg, var(--gold-light), var(--gold) 60%, var(--gold-dark));
+      color: var(--green-950); margin-bottom: 22px;
+    }
+    .service-icon svg { width: 27px; height: 27px; }
+    .service-card h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; margin-bottom: 10px; }
+    .service-card p { color: #b9c9c0; font-size: 0.94rem; font-weight: 300; }
+    .service-card a {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+      color: var(--gold-light); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em;
+      transition: gap 0.3s;
+    }
+    .service-card a:hover { gap: 14px; }
+    .service-card a svg { width: 15px; height: 15px; }
+
+    /* ============ Trust band ============ */
+    .trust { padding: 74px 0; background: var(--cream); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+    .trust-item svg { width: 40px; height: 40px; stroke: var(--gold-dark); margin: 0 auto 14px; }
+    .trust-item h4 { font-family: var(--serif); font-size: 1.2rem; color: var(--green-900); margin-bottom: 6px; }
+    .trust-item p { font-size: 0.88rem; color: var(--muted); }
+
+    /* ============ Testimonials ============ */
+    .testimonials { padding: 110px 0; background: linear-gradient(180deg, var(--cream), var(--cream-2)); }
+    .rating-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 34px 0 50px; flex-wrap: wrap; }
+    .rating-stars { color: var(--gold); font-size: 1.25rem; letter-spacing: 3px; }
+    .rating-row p { color: var(--muted); font-size: 0.95rem; }
+    .rating-row a { color: var(--gold-dark); font-weight: 600; border-bottom: 1px solid var(--gold); transition: color 0.25s; }
+    .rating-row a:hover { color: var(--green-800); }
+    .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .t-card {
+      background: var(--white); border-radius: var(--radius); padding: 34px 30px;
+      box-shadow: 0 18px 44px -28px rgba(6, 35, 27, 0.4); position: relative;
+      border-top: 3px solid var(--gold);
+    }
+    .t-card .quote-mark { font-family: var(--serif); font-size: 4rem; color: var(--gold); opacity: 0.35; line-height: 0.6; display: block; margin-bottom: 18px; }
+    .t-card p { color: #4c483d; font-size: 0.98rem; font-style: italic; }
+    .t-author { display: flex; align-items: center; gap: 14px; margin-top: 24px; }
+    .t-avatar {
+      width: 48px; height: 48px; border-radius: 50%; flex: none;
+      background: linear-gradient(145deg, var(--green-700), var(--green-950));
+      color: var(--gold-light); display: grid; place-items: center;
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 700;
+    }
+    .t-author strong { display: block; color: var(--green-900); }
+    .t-author small { color: var(--muted); font-size: 0.8rem; }
+
+    /* ============ CTA banner ============ */
+    .cta-banner { padding: 0 0 110px; background: linear-gradient(180deg, var(--cream-2), var(--cream)); }
+    .cta-inner {
+      background:
+        radial-gradient(600px 300px at 90% 0%, rgba(212, 175, 55, 0.22), transparent 60%),
+        linear-gradient(135deg, var(--green-900), var(--green-950));
+      border-radius: 26px; padding: 64px 70px;
+      display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;
+      position: relative; overflow: hidden; box-shadow: var(--shadow);
+    }
+    .cta-inner::after { content: "الم"; position: absolute; right: 4%; bottom: -30%; font-family: var(--arabic); font-size: 11rem; color: rgba(212, 175, 55, 0.07); }
+    .cta-inner h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.6vw, 2.6rem); color: var(--cream); font-weight: 600; max-width: 560px; line-height: 1.2; }
+    .cta-inner h2 em { color: var(--gold-light); font-style: italic; }
+    .cta-inner p { color: #b9c9c0; margin-top: 12px; max-width: 520px; }
+    .cta-actions { display: flex; gap: 14px; flex-wrap: wrap; position: relative; }
+
+    /* ============ Contact ============ */
+    .contact { padding: 110px 0 100px; background: var(--cream); }
+    .contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; margin-top: 54px; align-items: start; }
+    .contact-cards { display: grid; gap: 18px; }
+    .contact-card {
+      display: flex; gap: 18px; align-items: flex-start;
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 22px 24px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .contact-card:hover { transform: translateX(6px); box-shadow: var(--shadow); }
+    .contact-icon {
+      width: 50px; height: 50px; flex: none; border-radius: 14px;
+      background: linear-gradient(145deg, var(--green-800), var(--green-950));
+      display: grid; place-items: center;
+    }
+    .contact-icon svg { width: 22px; height: 22px; stroke: var(--gold-light); }
+    .contact-card h4 { font-family: var(--serif); font-size: 1.15rem; color: var(--green-900); }
+    .contact-card a, .contact-card p { color: var(--muted); font-size: 0.95rem; display: block; }
+    .contact-card a:hover { color: var(--gold-dark); }
+    .contact-card .sub { font-size: 0.82rem; letter-spacing: 0.08em; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; }
+
+    .contact-form {
+      background: var(--white); border-radius: 22px; padding: 40px 38px;
+      box-shadow: var(--shadow); border-top: 4px solid var(--gold);
+    }
+    .contact-form h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--green-900); }
+    .contact-form > p { color: var(--muted); font-size: 0.95rem; margin-bottom: 26px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-field { margin-bottom: 18px; }
+    .form-field label { display: block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-800); margin-bottom: 8px; }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%; padding: 14px 16px; border-radius: 12px;
+      border: 1.5px solid #e4ddc9; background: var(--cream);
+      font-family: inherit; font-size: 0.95rem; color: var(--ink);
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .form-field textarea { resize: vertical; min-height: 110px; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18);
+    }
+    .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 12px; text-align: center; }
+    .form-note a { color: var(--gold-dark); font-weight: 600; }
+
+    /* ============ Footer ============ */
+    .footer { background: var(--green-950); color: #b9c9c0; padding: 84px 0 0; position: relative; overflow: hidden; }
+    .footer::before { content: "الم"; position: absolute; left: -2%; top: -6%; font-family: var(--arabic); font-size: 16rem; color: rgba(212, 175, 55, 0.04); line-height: 1; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 0.8fr 1fr 1.2fr; gap: 48px; position: relative; }
+    .footer h5 {
+      font-family: var(--serif); font-size: 1.25rem; color: var(--cream);
+      margin-bottom: 22px; font-weight: 600;
+    }
+    .footer h5::after { content: ""; display: block; width: 34px; height: 2px; background: var(--gold); margin-top: 10px; }
+    .footer-brand p { font-size: 0.92rem; margin: 18px 0 24px; max-width: 320px; font-weight: 300; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-socials a {
+      width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.35); transition: all 0.3s;
+    }
+    .footer-socials svg { width: 17px; height: 17px; stroke: var(--gold-light); }
+    .footer-socials a:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-4px); }
+    .footer-socials a:hover svg { stroke: var(--green-950); }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a {
+      display: inline-flex; align-items: center; gap: 8px; font-size: 0.94rem;
+      transition: color 0.25s, transform 0.25s;
+    }
+    .footer-links a::before { content: "✦"; font-size: 0.6rem; color: var(--gold); }
+    .footer-links a:hover { color: var(--gold-light); transform: translateX(4px); }
+    .footer-contact li { display: flex; gap: 12px; margin-bottom: 16px; font-size: 0.93rem; }
+    .footer-contact svg { width: 17px; height: 17px; stroke: var(--gold); flex: none; margin-top: 4px; }
+    .footer-contact a:hover { color: var(--gold-light); }
+    .newsletter { display: flex; gap: 10px; margin-top: 8px; }
+    .newsletter input {
+      flex: 1; padding: 13px 18px; border-radius: 999px; border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(255, 255, 255, 0.06); color: var(--cream); font-family: inherit; font-size: 0.9rem;
+    }
+    .newsletter input::placeholder { color: #7d9086; }
+    .newsletter input:focus { outline: none; border-color: var(--gold); }
+    .newsletter button {
+      padding: 13px 24px; border-radius: 999px; font-weight: 600;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold) 60%, var(--gold-dark));
+      color: var(--green-950); transition: transform 0.3s;
+    }
+    .newsletter button:hover { transform: translateY(-2px); }
+    .newsletter-msg { font-size: 0.82rem; color: var(--gold-light); margin-top: 10px; min-height: 1.2em; }
+    .footer-bottom {
+      margin-top: 64px; border-top: 1px solid rgba(212, 175, 55, 0.16);
+      padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      font-size: 0.85rem; position: relative;
+    }
+    .footer-bottom a { color: var(--gold-light); transition: color 0.25s; }
+    .footer-bottom a:hover { color: var(--cream); }
+    .footer-bottom-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .footer-bottom-links button { color: #b9c9c0; font-size: 0.85rem; transition: color 0.25s; }
+    .footer-bottom-links button:hover { color: var(--gold-light); }
+
+    /* ============ Floating buttons ============ */
+    .float-wa {
+      position: fixed; right: 22px; bottom: 22px; z-index: 55;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366; display: grid; place-items: center;
+      box-shadow: 0 16px 34px -10px rgba(37, 211, 102, 0.6);
+      transition: transform 0.3s; animation: pulse 2.4s infinite;
+    }
+    .float-wa:hover { transform: scale(1.1); }
+    .float-wa svg { width: 28px; height: 28px; fill: #fff; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); } 70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+    .back-top {
+      position: fixed; left: 22px; bottom: 22px; z-index: 55;
+      width: 50px; height: 50px; border-radius: 50%;
+      background: var(--green-900); color: var(--gold-light); border: 1px solid var(--line);
+      display: grid; place-items: center; opacity: 0; pointer-events: none; transition: all 0.35s;
+    }
+    .back-top.show { opacity: 1; pointer-events: auto; }
+    .back-top:hover { background: var(--green-700); transform: translateY(-4px); }
+    .back-top svg { width: 20px; height: 20px; stroke: var(--gold-light); }
+
+    /* ============ Modals ============ */
+    .modal {
+      position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 24px;
+      background: rgba(6, 35, 27, 0.7); backdrop-filter: blur(6px);
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .modal.open { opacity: 1; pointer-events: auto; }
+    .modal-card {
+      background: var(--cream); border-radius: 22px; max-width: 640px; width: 100%;
+      max-height: 82vh; overflow-y: auto; padding: 40px 42px; position: relative;
+      border-top: 4px solid var(--gold); transform: translateY(20px); transition: transform 0.3s;
+      box-shadow: var(--shadow);
+    }
+    .modal.open .modal-card { transform: none; }
+    .modal-close {
+      position: absolute; top: 16px; right: 18px; width: 38px; height: 38px;
+      border-radius: 50%; border: 1px solid var(--line); font-size: 1.05rem;
+      color: var(--green-900); transition: all 0.25s;
+    }
+    .modal-close:hover { background: var(--green-900); color: var(--cream); }
+    .modal-card h3 { font-family: var(--serif); font-size: 1.9rem; color: var(--green-900); margin-bottom: 16px; }
+    .modal-card p, .modal-card li { color: #4c483d; font-size: 0.95rem; }
+    .modal-card ul { margin: 12px 0 12px 18px; list-style: disc; }
+    .modal-card li { margin-bottom: 8px; }
+
+    /* ============ Reveal animations ============ */
+    .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+
+    /* ============ Responsive ============ */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; padding: 64px 0 80px; }
+      .hero-visual { max-width: 560px; margin: 0 auto; }
+      .hero-frame img { height: 400px; }
+      .collection-grid, .services-grid, .t-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-visual img { height: 420px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 860px) {
+      .nav-links, .nav-cta .btn { display: none; }
+      .hamburger { display: flex; }
+      .topbar-left { justify-content: center; }
+      .topbar-inner { justify-content: center; }
+      .topbar-socials { display: none; }
+    }
+    @media (max-width: 640px) {
+      .collection-grid, .services-grid, .t-grid, .footer-grid, .trust-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+      .hero-badge { left: 12px; }
+      .cta-inner { padding: 48px 30px; }
+      .contact-form { padding: 32px 24px; }
+      .modal-card { padding: 32px 24px; }
+      .exp-card { right: 8px; }
+      .scroll-hint { display: none; }
+      .footer-bottom { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ Top bar ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:+923001234567" aria-label="Call us">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +92 300 1234567
+        </a>
+        <a href="mailto:hello@aliflaammeem.pk" aria-label="Email us">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          hello@aliflaammeem.pk
+        </a>
+        <span style="display:inline-flex;align-items:center;gap:7px">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon – Sat · 11:00 AM – 9:00 PM
+        </span>
+      </div>
+      <div class="topbar-socials">
+        <a href="https://www.facebook.com/aliflaammeem" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/aliflaammeem" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.tiktok.com/@aliflaammeem" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+        <a href="https://www.youtube.com/@aliflaammeem" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Header / Nav ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Alif Laam Meem Jewellers — home">
+        <span class="brand-mark">الم</span>
+        <span class="brand-text">
+          <strong>Alif Laam Meem</strong>
+          <span>Jewellers</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20would%20like%20to%20book%20a%20private%20visit%20at%20Alif%20Laam%20Meem%20Jewellers." target="_blank" rel="noopener" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+          Book a Visit
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ Mobile menu ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20have%20a%20question%20about%20your%20jewellery." target="_blank" rel="noopener" class="btn btn-gold">WhatsApp Us</a>
+      <small>Shop 12–14, Gold Souk, Tariq Road, Karachi</small>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Est. 1998 · Karachi, Pakistan</span>
+          <h1>Timeless Gold, <em>Crafted with Imaan</em> &amp; Legacy</h1>
+          <p>Discover certified hallmarked 21K &amp; 22K gold, regal bridal sets and rare gemstones — handcrafted by master artisans and trusted by families for three generations.</p>
+          <div class="hero-actions">
+            <a href="#collections" class="btn btn-gold">Explore Collections
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20Please%20share%20your%20latest%20catalogue." target="_blank" rel="noopener" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+              Get Catalogue
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><b data-count="27">0</b><span>Years of Craft</span></div>
+            <div class="hero-stat"><b data-count="15000">0</b><span>Happy Families</span></div>
+            <div class="hero-stat"><b data-count="100">0</b><span>% Hallmark Certified</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal visible">
+          <div class="hero-frame">
+            <img src="assets/images/hero.jpg" alt="Ornate 21K gold bridal jewellery set with emeralds on emerald silk" />
+          </div>
+          <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div><strong>Certified Hallmark</strong><small>21K · 22K · 925 Silver</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">Scroll<span></span></div>
+    </section>
+
+    <!-- ============ Marquee ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>21K Gold <i>✦</i> 22K Gold <i>✦</i> Bridal Sets <i>✦</i> 925 Silver <i>✦</i> Gemstones <i>✦</i> Custom Design <i>✦</i> Free Home Delivery <i>✦</i> Gold Exchange <i>✦</i> Hallmark Certified <i>✦</i></span>
+        <span>21K Gold <i>✦</i> 22K Gold <i>✦</i> Bridal Sets <i>✦</i> 925 Silver <i>✦</i> Gemstones <i>✦</i> Custom Design <i>✦</i> Free Home Delivery <i>✦</i> Gold Exchange <i>✦</i> Hallmark Certified <i>✦</i></span>
+      </div>
+    </div>
+
+    <!-- ============ About ============ -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <img src="assets/images/about.jpg" alt="Master goldsmith handcrafting a gold necklace at the workbench" />
+          <div class="exp-card">
+            <b data-count="27">0</b>
+            <span>Years of Trust</span>
+          </div>
+        </div>
+        <div class="about-copy reveal reveal-delay-1">
+          <span class="eyebrow">Our Story</span>
+          <h2 class="section-title">A Legacy Written in <em>Gold</em></h2>
+          <p class="section-lead">Alif Laam Meem Jewellers began in 1998 as a small family atelier in the heart of Karachi's gold souk. Three generations later, we remain what we have always been — craftsmen guided by honesty, artistry and the barakah of good measure.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div><strong>BIS &amp; Certified Hallmark</strong><p>Every piece assayed &amp; laser-hallmarked for guaranteed purity.</p></div>
+            </div>
+            <div class="about-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+              <div><strong>Master Artisans</strong><p>Hand-finished by karigars with 25+ years of experience.</p></div>
+            </div>
+            <div class="about-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <div><strong>Honest Pricing</strong><p>Live gold rate, transparent making charges — no hidden costs.</p></div>
+            </div>
+            <div class="about-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+              <div><strong>Lifetime Buy-Back</strong><p>Exchange or buy-back at full market value, any time.</p></div>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="#collections" class="btn btn-dark">View Our Work</a>
+            <a href="#contact" class="btn btn-outline">Visit the Showroom</a>
+          </div>
+          <div class="signature">
+            <b>Muhammad Usman</b>
+            <small>Founder &amp; Master Goldsmith</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Collections ============ -->
+    <section class="collections" id="collections">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow center">Our Collections</span>
+          <h2 class="section-title">Treasures for Every <em>Occasion</em></h2>
+          <p class="section-lead">From nikkah day bridal sets to everyday elegance — browse our signature collections, then WhatsApp us for live prices and availability.</p>
+        </div>
+        <div class="filters reveal" role="tablist" aria-label="Collection filters">
+          <button class="filter-btn active" data-filter="all">All Pieces</button>
+          <button class="filter-btn" data-filter="bridal">Bridal</button>
+          <button class="filter-btn" data-filter="gold">Gold</button>
+          <button class="filter-btn" data-filter="silver">Silver</button>
+          <button class="filter-btn" data-filter="gems">Gemstones</button>
+        </div>
+        <div class="collection-grid" id="collectionGrid">
+
+          <article class="collection-card show reveal" data-category="bridal gold">
+            <div class="card-media">
+              <img src="assets/images/bridal.jpg" alt="Complete gold bridal set with red and green gemstones" loading="lazy" />
+              <span class="card-tag">Signature Bridal</span>
+            </div>
+            <div class="card-body">
+              <h3>Nikkah Bridal Set</h3>
+              <p>Full necklace, jhumkas &amp; tikka in 21K gold with kundan &amp; polki accents.</p>
+              <div class="card-links">
+                <a class="card-link gold" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20am%20interested%20in%20the%20Nikkah%20Bridal%20Set.%20Please%20share%20details." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                  Enquire
+                </a>
+                <a class="card-link" href="#contact">Book Trial</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-card show reveal reveal-delay-1" data-category="gold">
+            <div class="card-media">
+              <img src="assets/images/gold.jpg" alt="Intricate 22K gold filigree necklace and earrings" loading="lazy" />
+              <span class="card-tag">22K Gold</span>
+            </div>
+            <div class="card-body">
+              <h3>Filigree Heritage Set</h3>
+              <p>Hand-woven 22K filigree necklace with matching jhumkas — a true heirloom.</p>
+              <div class="card-links">
+                <a class="card-link gold" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20am%20interested%20in%20the%20Filigree%20Heritage%20Set.%20Please%20share%20details." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                  Enquire
+                </a>
+                <a class="card-link" href="#contact">Visit Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-card show reveal reveal-delay-2" data-category="silver">
+            <div class="card-media">
+              <img src="assets/images/silver.jpg" alt="Polished 925 silver bangles and chain necklace" loading="lazy" />
+              <span class="card-tag">925 Silver</span>
+            </div>
+            <div class="card-body">
+              <h3>Noorni Silver Range</h3>
+              <p>Anti-tarnish 925 sterling bangles &amp; chains for effortless daily elegance.</p>
+              <div class="card-links">
+                <a class="card-link gold" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20am%20interested%20in%20the%20Noorni%20Silver%20Range.%20Please%20share%20details." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                  Enquire
+                </a>
+                <a class="card-link" href="#contact">Visit Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-card show reveal" data-category="gold gems">
+            <div class="card-media">
+              <img src="assets/images/rings.jpg" alt="Gold wedding rings with diamonds on emerald velvet" loading="lazy" />
+              <span class="card-tag">Wedding Bands</span>
+            </div>
+            <div class="card-body">
+              <h3>Nikah Rings Duo</h3>
+              <p>His &amp; hers 21K gold bands with certified diamonds, engraving included.</p>
+              <div class="card-links">
+                <a class="card-link gold" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20am%20interested%20in%20the%20Nikah%20Rings%20Duo.%20Please%20share%20details." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                  Enquire
+                </a>
+                <a class="card-link" href="#services">Engraving Info</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-card show reveal reveal-delay-1" data-category="gems">
+            <div class="card-media">
+              <img src="assets/images/gems.jpg" alt="Emerald and ruby gemstone pendant in gold setting" loading="lazy" />
+              <span class="card-tag">Gemstones</span>
+            </div>
+            <div class="card-body">
+              <h3>Zumurrud Gem Pendants</h3>
+              <p>Certified emerald, ruby &amp; sapphire pendants set in hand-forged gold.</p>
+              <div class="card-links">
+                <a class="card-link gold" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20am%20interested%20in%20the%20Zumurrud%20Gem%20Pendants.%20Please%20share%20details." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                  Enquire
+                </a>
+                <a class="card-link" href="#contact">Get Certified</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-card show reveal reveal-delay-2" data-category="bridal gold">
+            <div class="card-media">
+              <img src="assets/images/hero.jpg" alt="Regal 21K gold bridal set on emerald silk" loading="lazy" />
+              <span class="card-tag">Bestseller</span>
+            </div>
+            <div class="card-body">
+              <h3>Shaadi Royal Set</h3>
+              <p>Our most-loved bridal ensemble — 21K gold with emerald &amp; ruby meena.</p>
+              <div class="card-links">
+                <a class="card-link gold" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20am%20interested%20in%20the%20Shaadi%20Royal%20Set.%20Please%20share%20details." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                  Enquire
+                </a>
+                <a class="card-link" href="#contact">Book Trial</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <div class="view-all reveal">
+          <a href="https://www.instagram.com/aliflaammeem" target="_blank" rel="noopener" class="btn btn-dark">
+            View Full Catalogue on Instagram
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Services ============ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow center">Our Services</span>
+          <h2 class="section-title">More Than a <em>Store</em></h2>
+          <p class="section-lead" style="margin-inline:auto;color:#b9c9c0">A complete jewellery house — from your first sketch to lifetime care of every piece you own.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <h3>Custom Design</h3>
+            <p>Bring a photo or an idea — our designers sketch, cast and craft your dream piece from scratch.</p>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20would%20like%20a%20custom%20design%20consultation." target="_blank" rel="noopener">Start a Design <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h3>Repair &amp; Restoration</h3>
+            <p>Re-polish, re-string, re-size and restore heirloom pieces — many done same-day in-store.</p>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20need%20a%20repair%20or%20restoration%20quote." target="_blank" rel="noopener">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-1.6 1.6-4-4z"/><path d="M4 14l8-8 6 6-8 8H4z"/><path d="M10 6.9l.7.7"/></svg></div>
+            <h3>Gold Exchange</h3>
+            <p>Swap old gold for new at live market rates with zero hidden deductions — fully weighed in front of you.</p>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20would%20like%20to%20exchange%20gold.%20What%20is%20today's%20rate%3F" target="_blank" rel="noopener">Check Today's Rate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div>
+            <h3>Gemstone Setting</h3>
+            <p>Certified emeralds, rubies &amp; sapphires — sourced, graded and set under one roof.</p>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20want%20to%20set%20a%20gemstone.%20Please%20guide%20me." target="_blank" rel="noopener">Consult a Gem Expert <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Hallmark Certification</h3>
+            <p>Independent assay &amp; laser hallmarking for every purchase, with a purity certificate.</p>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20have%20a%20question%20about%20hallmark%20certification." target="_blank" rel="noopener">Ask About Certification <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <h3>Free Home Delivery</h3>
+            <p>Insured, secure delivery across Karachi &amp; nationwide — try the piece at home before you pay.</p>
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20would%20like%20home%20delivery%20for%20a%20trial." target="_blank" rel="noopener">Book a Home Trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Trust band ============ -->
+    <section class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h4>Certified Purity</h4>
+          <p>Every piece laser-hallmarked &amp; lab-tested</p>
+        </div>
+        <div class="trust-item reveal reveal-delay-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h4>Insured Delivery</h4>
+          <p>Fully insured &amp; discreet doorstep service</p>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <h4>Family Owned</h4>
+          <p>Three generations of goldsmiths since 1998</p>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h4>7-Day Exchange</h4>
+          <p>Easy exchange &amp; lifetime buy-back promise</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Testimonials ============ -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow center">Client Love</span>
+          <h2 class="section-title">Words From Our <em>Families</em></h2>
+        </div>
+        <div class="rating-row reveal">
+          <span class="rating-stars">★★★★★</span>
+          <p><strong>4.9 / 5</strong> · 1,200+ verified reviews on</p>
+          <a href="https://www.google.com/maps/search/Alif+Laam+Meem+Jewellers" target="_blank" rel="noopener">Google Maps</a>
+        </div>
+        <div class="t-grid">
+          <div class="t-card reveal">
+            <span class="quote-mark">“</span>
+            <p>Ordered my entire nikkah set from Alif Laam Meem. The craftsmanship was beyond anything we saw in the bazaar — and the hallmark certificate gave my father complete peace of mind.</p>
+            <div class="t-author">
+              <span class="t-avatar">A</span>
+              <div><strong>Ayesha Siddiqui</strong><small>Bridal Set · Clifton, Karachi</small></div>
+            </div>
+          </div>
+          <div class="t-card reveal reveal-delay-1">
+            <span class="quote-mark">“</span>
+            <p>Exchanged my mother's old gold for new bangles. They weighed everything in front of us, explained the rate sheet line by line, and the new pieces arrived hallmarked and polished.</p>
+            <div class="t-author">
+              <span class="t-avatar">H</span>
+              <div><strong>Hamza Sheikh</strong><small>Gold Exchange · Gulshan-e-Iqbal</small></div>
+            </div>
+          </div>
+          <div class="t-card reveal reveal-delay-2">
+            <span class="quote-mark">“</span>
+            <p>I sent a rough sketch on WhatsApp and received a 3D design the next day. The ring was ready in ten days, engraved exactly as requested. True craftsmen, honest people.</p>
+            <div class="t-author">
+              <span class="t-avatar">F</span>
+              <div><strong>Fatima &amp; Bilal R.</strong><small>Custom Design · DHA, Karachi</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA banner ============ -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div>
+            <h2>Planning a Wedding? <em>Let's Craft Your Day.</em></h2>
+            <p>Book a private appointment — we'll prepare a curated selection for your family before you even arrive.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20would%20like%20to%20book%20a%20private%20appointment." target="_blank" rel="noopener" class="btn btn-gold">Book Appointment</a>
+            <a href="tel:+923001234567" class="btn btn-light">Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow center">Get In Touch</span>
+          <h2 class="section-title">Visit, Call or <em>WhatsApp</em></h2>
+          <p class="section-lead">Our gold experts reply within minutes during store hours. For private family appointments, we recommend booking a day in advance.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-cards reveal">
+            <div class="contact-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <h4>Visit Our Showroom</h4>
+                <p>Shop 12–14, Gold Souk, Tariq Road,<br/>Karachi, Pakistan</p>
+                <a class="sub" href="https://www.google.com/maps/search/Alif+Laam+Meem+Jewellers,+Tariq+Road,+Karachi" target="_blank" rel="noopener">Get Directions →</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div>
+                <h4>Call Us</h4>
+                <a href="tel:+923001234567">+92 300 1234567</a>
+                <a href="tel:+922134567890">+92 21 3456 7890 (Store)</a>
+                <span class="sub">Mon – Sat · 11 AM – 9 PM</span>
+              </div>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></span>
+              <div>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/923001234567" target="_blank" rel="noopener">+92 300 1234567</a>
+                <span class="sub">Fastest response · send photos &amp; sketches</span>
+              </div>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+              <div>
+                <h4>Email Us</h4>
+                <a href="mailto:hello@aliflaammeem.pk">hello@aliflaammeem.pk</a>
+                <a href="mailto:orders@aliflaammeem.pk">orders@aliflaammeem.pk</a>
+                <span class="sub">Replies within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+            <h3>Send an Enquiry</h3>
+            <p>Fill this in and it will open in WhatsApp, ready to send — the fastest way to reach our team.</p>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cfName">Full Name</label>
+                <input type="text" id="cfName" name="name" placeholder="e.g. Ayesha Khan" required />
+              </div>
+              <div class="form-field">
+                <label for="cfPhone">Phone / WhatsApp</label>
+                <input type="tel" id="cfPhone" name="phone" placeholder="03xx xxxxxxx" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cfInterest">I'm Interested In</label>
+                <select id="cfInterest" name="interest">
+                  <option>Bridal Jewellery</option>
+                  <option>Gold Jewellery</option>
+                  <option>Silver Jewellery</option>
+                  <option>Gemstones</option>
+                  <option>Custom Design</option>
+                  <option>Gold Exchange / Buy-Back</option>
+                  <option>Repair &amp; Restoration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="cfBudget">Budget Range</label>
+                <select id="cfBudget" name="budget">
+                  <option>Under Rs 100,000</option>
+                  <option>Rs 100,000 – 500,000</option>
+                  <option>Rs 500,000 – 1,500,000</option>
+                  <option>Above Rs 1,500,000</option>
+                  <option>Just browsing</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cfMessage">Message</label>
+              <textarea id="cfMessage" name="message" placeholder="Tell us about the occasion, design or piece you have in mind…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+              Send via WhatsApp
+            </button>
+            <p class="form-note">Prefer email? Write to <a href="mailto:hello@aliflaammeem.pk">hello@aliflaammeem.pk</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#home" aria-label="Back to top">
+            <span class="brand-mark">الم</span>
+            <span class="brand-text">
+              <strong style="color:var(--cream)">Alif Laam Meem</strong>
+              <span style="color:var(--gold)">Jewellers</span>
+            </span>
+          </a>
+          <p>Certified hallmarked gold, bridal and gemstone jewellery — handcrafted in Karachi since 1998 with honesty, artistry and barakah in every gram.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/aliflaammeem" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/aliflaammeem" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://www.tiktok.com/@aliflaammeem" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+            <a href="https://www.youtube.com/@aliflaammeem" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+            <a href="https://wa.me/923001234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20Please%20share%20your%20bridal%20collection." target="_blank" rel="noopener">Bridal Sets</a></li>
+            <li><a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20Please%20share%20your%20gold%20collection." target="_blank" rel="noopener">Gold Jewellery</a></li>
+            <li><a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20Please%20share%20your%20silver%20collection." target="_blank" rel="noopener">Silver Range</a></li>
+            <li><a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20Please%20share%20your%20gemstone%20collection." target="_blank" rel="noopener">Gemstones</a></li>
+            <li><a href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20Please%20share%20wedding%20ring%20options." target="_blank" rel="noopener">Wedding Rings</a></li>
+            <li><a href="https://www.instagram.com/aliflaammeem" target="_blank" rel="noopener">Full Catalogue</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Shop 12–14, Gold Souk, Tariq Road, Karachi, Pakistan</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+923001234567">+92 300 1234567</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:hello@aliflaammeem.pk">hello@aliflaammeem.pk</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Mon – Sat · 11:00 AM – 9:00 PM</span></li>
+          </ul>
+          <form class="newsletter" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Email for new arrivals" aria-label="Email for new arrivals" required />
+            <button type="submit">Join</button>
+          </form>
+          <p class="newsletter-msg" id="newsletterMsg"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Alif Laam Meem Jewellers. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <button data-policy="privacy">Privacy Policy</button>
+          <button data-policy="terms">Terms of Service</button>
+          <button data-policy="returns">Exchange &amp; Returns</button>
+          <a href="#home">Sitemap ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Policy modals ============ -->
+  <div class="modal" id="policyModal" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <h3 id="policyTitle">Policy</h3>
+      <div id="policyBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ Floating buttons ============ -->
+  <a class="float-wa" href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum!%20I%20have%20a%20question%20about%20Alif%20Laam%20Meem%20Jewellers." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script>
+    // ===== Year =====
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== Sticky header shadow =====
+    const header = document.getElementById('siteHeader');
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+      backTop.classList.toggle('show', window.scrollY > 600);
+    }, { passive: true });
+
+    // ===== Mobile menu =====
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }));
+
+    // ===== Active nav link highlighting =====
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-links .nav-link');
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // ===== Reveal on scroll =====
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
+
+    // ===== Animated counters =====
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.count;
+        const duration = 1800;
+        const start = performance.now();
+        const tick = now => {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased).toLocaleString();
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+    // ===== Collection filters =====
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.collection-card');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.category.includes(filter);
+        card.classList.toggle('show', match);
+        if (match) card.style.display = 'block';
+        else card.style.display = 'none';
+      });
+    }));
+
+    // ===== Contact form → WhatsApp =====
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('cfName').value.trim();
+      const phone = document.getElementById('cfPhone').value.trim();
+      if (!name || !phone) {
+        alert('Please enter your name and phone number so we can reply.');
+        return;
+      }
+      const interest = document.getElementById('cfInterest').value;
+      const budget = document.getElementById('cfBudget').value;
+      const message = document.getElementById('cfMessage').value.trim();
+      const text =
+        `Assalam o Alaikum! New enquiry from the website:%0A%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Interested in: ${encodeURIComponent(interest)}%0A` +
+        `Budget: ${encodeURIComponent(budget)}%0A` +
+        (message ? `Message: ${encodeURIComponent(message)}` : '');
+      window.open(`https://wa.me/923001234567?text=${text}`, '_blank', 'noopener');
+    });
+
+    // ===== Newsletter =====
+    document.getElementById('newsletterForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value.trim();
+      const msg = document.getElementById('newsletterMsg');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      msg.textContent = 'JazakAllah! You are subscribed — new arrivals coming soon. ✦';
+      document.getElementById('newsletterEmail').value = '';
+    });
+
+    // ===== Policy modals =====
+    const policies = {
+      privacy: {
+        title: 'Privacy Policy',
+        body: `
+          <p>Alif Laam Meem Jewellers respects your privacy. Information you share with us — such as your name, phone number or email — is used only to respond to your enquiries, process orders and improve our service.</p>
+          <ul>
+            <li>We never sell or rent your personal information to third parties.</li>
+            <li>Payment details are never stored on our systems.</li>
+            <li>WhatsApp conversations remain between you and our store team.</li>
+            <li>You may request deletion of your details at any time by writing to <a href="mailto:hello@aliflaammeem.pk">hello@aliflaammeem.pk</a>.</li>
+          </ul>`
+      },
+      terms: {
+        title: 'Terms of Service',
+        body: `
+          <p>By using this website and placing enquiries with Alif Laam Meem Jewellers, you agree to the following terms:</p>
+          <ul>
+            <li>All gold prices are quoted at the live daily market rate plus disclosed making charges.</li>
+            <li>Hallmark certificates are issued for every gold piece at the time of purchase.</li>
+            <li>Designs and photographs on this site are our intellectual property and may not be reproduced.</li>
+            <li>Weights, purity and pricing are always confirmed in writing before any order is confirmed.</li>
+          </ul>`
+      },
+      returns: {
+        title: 'Exchange & Returns',
+        body: `
+          <p>We stand behind every piece we craft. Our exchange policy is simple and transparent:</p>
+          <ul>
+            <li>7-day exchange on unworn jewellery in original condition with the receipt.</li>
+            <li>Custom-made and engraved pieces can be resized or adjusted free within 30 days.</li>
+            <li>Lifetime buy-back at the full prevailing market rate for gold purchased from us.</li>
+            <li>For exchanges, visit the showroom or WhatsApp us to arrange insured pickup.</li>
+          </ul>`
+      }
+    };
+    const modal = document.getElementById('policyModal');
+    const policyTitle = document.getElementById('policyTitle');
+    const policyBody = document.getElementById('policyBody');
+    document.querySelectorAll('[data-policy]').forEach(btn => btn.addEventListener('click', () => {
+      const p = policies[btn.dataset.policy];
+      policyTitle.textContent = p.title;
+      policyBody.innerHTML = p.body;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }));
+    const closeModal = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ===== Back to top =====
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
