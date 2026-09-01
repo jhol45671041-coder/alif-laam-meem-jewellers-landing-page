@@ -506,6 +506,52 @@
     .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 12px; text-align: center; }
     .form-note a { color: var(--gold-dark); font-weight: 600; }
 
+    /* ============ Bank transfer card ============ */
+    .bank-card {
+      margin-top: 44px;
+      background:
+        radial-gradient(520px 240px at 100% 0%, rgba(212, 175, 55, 0.14), transparent 60%),
+        linear-gradient(135deg, var(--green-900), var(--green-950));
+      border: 1px solid var(--line);
+      border-radius: 22px; padding: 38px 42px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 34px; flex-wrap: wrap;
+      box-shadow: var(--shadow); position: relative; overflow: hidden;
+    }
+    .bank-card::after {
+      content: "الم"; position: absolute; right: -1%; bottom: -78%;
+      font-family: var(--arabic); font-size: 11rem;
+      color: rgba(212, 175, 55, 0.07); pointer-events: none;
+    }
+    .bank-info { display: flex; gap: 22px; align-items: center; position: relative; z-index: 1; }
+    .bank-logo {
+      width: 64px; height: 64px; flex: none; border-radius: 16px;
+      background: linear-gradient(145deg, #ef233c, #a50018);
+      color: #fff; display: grid; place-items: center;
+      font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em;
+      box-shadow: 0 14px 30px -12px rgba(165, 0, 24, 0.6);
+    }
+    .bank-info h3 { font-family: var(--serif); font-size: 1.5rem; color: var(--cream); font-weight: 600; line-height: 1.2; }
+    .bank-account { color: #b9c9c0; font-size: 0.9rem; margin-top: 5px; }
+    .bank-account strong { color: var(--gold-light); letter-spacing: 0.06em; }
+    .iban { margin-top: 12px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .iban small {
+      background: rgba(212, 175, 55, 0.16); color: var(--gold-light);
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
+      padding: 6px 13px; border-radius: 999px;
+    }
+    .iban b {
+      font-family: 'Courier New', ui-monospace, monospace;
+      font-size: 1.14rem; letter-spacing: 0.07em; color: var(--gold-light);
+    }
+    .bank-actions {
+      display: flex; flex-direction: column; align-items: stretch; gap: 12px;
+      position: relative; z-index: 1; min-width: 240px;
+    }
+    .bank-actions .btn { justify-content: center; }
+    .bank-paid { font-size: 0.85rem; color: #b9c9c0; text-align: center; margin-top: 2px; transition: color 0.25s; }
+    .bank-paid:hover { color: var(--gold-light); }
+
     /* ============ Footer ============ */
     .footer { background: var(--green-950); color: #b9c9c0; padding: 84px 0 0; position: relative; overflow: hidden; }
     .footer::before { content: "الم"; position: absolute; left: -2%; top: -6%; font-family: var(--arabic); font-size: 16rem; color: rgba(212, 175, 55, 0.04); line-height: 1; }
@@ -1166,6 +1212,28 @@
             <p class="form-note">We usually reply within minutes during store hours — Mon to Sat, 11 AM – 9 PM.</p>
           </form>
         </div>
+
+        <div class="bank-card reveal">
+          <div class="bank-info">
+            <span class="bank-logo">MCB</span>
+            <div>
+              <h3>Pay by Bank Transfer — MCB Bank</h3>
+              <p class="bank-account">Account Title: <strong>ALIF LAAM MEEM JEWELLERS</strong></p>
+              <p class="iban"><small>IBAN</small><b id="ibanText">PK48 MUCB 1694 4424 8100 5829</b></p>
+            </div>
+          </div>
+          <div class="bank-actions">
+            <button type="button" class="btn btn-gold" id="copyIban" aria-label="Copy IBAN to clipboard">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span id="copyIbanLabel">Copy IBAN</span>
+            </button>
+            <button type="button" class="btn btn-light" id="openBankApp" aria-label="Open MCB bank app">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+              Open Bank App
+            </button>
+            <a class="bank-paid" href="https://wa.me/923114817882?text=Assalam%20o%20Alaikum!%20I%20have%20transferred%20payment%20to%20your%20MCB%20account%20(IBAN%20PK48MUCB1694442481005829).%20Sending%20the%20screenshot%20shortly." target="_blank" rel="noopener">Paid already? Send proof on WhatsApp →</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -1422,6 +1490,59 @@
     document.getElementById('modalClose').addEventListener('click', closeModal);
     modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ===== Bank transfer: copy IBAN & open bank app =====
+    const IBAN_RAW = 'PK48MUCB1694442481005829';
+    const copyIbanBtn = document.getElementById('copyIban');
+    const copyIbanLabel = document.getElementById('copyIbanLabel');
+
+    copyIbanBtn.addEventListener('click', async () => {
+      let copied = false;
+      try {
+        await navigator.clipboard.writeText(IBAN_RAW);
+        copied = true;
+      } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.value = IBAN_RAW;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { copied = document.execCommand('copy'); } catch (e) { copied = false; }
+        ta.remove();
+      }
+      copyIbanLabel.textContent = copied ? 'Copied ✓ Paste in your bank app' : 'Select & copy manually';
+      setTimeout(() => { copyIbanLabel.textContent = 'Copy IBAN'; }, 2600);
+    });
+
+    document.getElementById('openBankApp').addEventListener('click', () => {
+      const ua = navigator.userAgent;
+      const isIOS = /iphone|ipad|ipod/i.test(ua);
+      const isAndroid = /android/i.test(ua);
+      const isMobile = isIOS || isAndroid || /mobile/i.test(ua);
+
+      // 1) Try to launch the MCB Live banking app via its URL scheme
+      ['mcblive://', 'mcb://'].forEach(scheme => {
+        const frame = document.createElement('iframe');
+        frame.style.display = 'none';
+        frame.src = scheme;
+        document.body.appendChild(frame);
+        setTimeout(() => frame.remove(), 4000);
+      });
+
+      // 2) If the app didn't open (page still visible), fall back to its store page
+      setTimeout(() => {
+        if (document.hidden) return;
+        const fallback = isIOS
+          ? 'https://apps.apple.com/pk/search?term=mcb%20live'
+          : isAndroid
+          ? 'https://play.google.com/store/apps/details?id=com.mcb.mcblive'
+          : 'https://www.mcb.com.pk';
+        const win = window.open(fallback, '_blank', 'noopener');
+        if (!win) window.location.href = fallback;
+      }, 2500);
+    });
 
     // ===== Back to top =====
     backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));

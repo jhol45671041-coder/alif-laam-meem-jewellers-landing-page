@@ -11,6 +11,7 @@ A luxury single-page landing site for **Alif Laam Meem Jewellers** — hallmarke
 | Instagram | [@alifl_aammeemjewellers](https://www.instagram.com/alifl_aammeemjewellers) |
 | Facebook | https://www.facebook.com/share/1BUtcV9hP3/ |
 | Location | [Al Rehman Square Mall, Shop # 8, Al Rehman Garden Phase 2, Sharaqpur, Lahore](https://maps.app.goo.gl/UECVETk9s7mBT7g5A) |
+| Bank / IBAN | MCB Bank · `PK48 MUCB 1694 4424 8100 5829` |
 
 ## Live Preview
 
@@ -41,6 +42,7 @@ Every link on the page is functional:
 - **Reviews** — Google Maps link to the store location
 - **CTA banner** — WhatsApp appointment booking + `tel:` call button
 - **Contact** — showroom directions (Google Maps), phone, WhatsApp, website; enquiry form that opens WhatsApp with the message pre-composed
+- **Bank transfer** — MCB IBAN card with one-tap **Copy IBAN** and an **Open Bank App** button that launches the MCB Live app on the customer's phone (with store-page fallback), plus a "Paid already?" WhatsApp button for payment proof
 - **Footer** — quick links (incl. website), collection links, contact links, newsletter, policy modals (Privacy / Terms / Exchange & Returns)
 - **Floating** — WhatsApp chat bubble + back-to-top button
 
