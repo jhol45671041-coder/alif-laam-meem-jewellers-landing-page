@@ -1,52 +1,32 @@
-# Alif Laam Meem Jewellers — Landing Page
+# Alif Laam Meem Jewellers — landing page
 
-A luxury single-page landing site for **Alif Laam Meem Jewellers** — pure 21K gold, bridal sets & gemstone jewellery.
+A responsive, static multi-page website for Alif Laam Meem Jewellers, Al Rehman Garden, Lahore.
 
-## Live details wired into the page
+## Preview locally
 
-| Detail | Value |
-| --- | --- |
-| WhatsApp / Phone | [+92 311 4817882](https://wa.me/923114817882) |
-| Website | https://jhol45671041-coder.github.io/alif-laam-meem-jewellers/ |
-| Instagram | [@alifl_aammeemjewellers](https://www.instagram.com/alifl_aammeemjewellers) |
-| Facebook | https://www.facebook.com/share/1BUtcV9hP3/ |
-| Location | [Al Rehman Square Mall, Shop # 8, Al Rehman Garden Phase 2, Sharaqpur, Lahore](https://maps.app.goo.gl/UECVETk9s7mBT7g5A) |
-| Bank / IBAN | MCB Bank · `PK48 MUCB 1694 4424 8100 5829` |
+From this folder, run:
 
-## Live Preview
-
-Serve locally and open in a browser:
-
-```bash
-python3 -m http.server 4173
-# → http://localhost:4173
+```sh
+python3 -m http.server 8000
 ```
 
-## Structure
+Then open `http://localhost:8000`.
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | Complete page — HTML + embedded CSS + JS (no build step) |
-| `assets/images/` | AI-generated luxury jewellery photography |
+## Before publishing
 
-## Sections & Links
+- Add the shop's WhatsApp number in `assets/js/site-config.js` (`whatsappNumber`, digits only with country code). WhatsApp inquiry links remain inactive until this is filled in.
+- Replace the product and shop photo placeholders with the shop's real photos.
+- Replace the collection, product, and story placeholders with details approved by the owner.
+- Add the exact storefront address, phone number, and opening hours on `contact.html`.
+- The Google Maps link searches the Al Rehman Garden area; it is not an exact shop pin.
 
-Every link on the page is functional:
+No online checkout, prices, inventory claims, or unprovided contact details are configured.
 
-- **Top bar** — call (`tel:`), website, store hours, social icons
-- **Nav** — Home · About · Collections · Services · Reviews · Contact (smooth-scroll anchors) + "Book a Visit" (WhatsApp)
-- **Hero** — CTA buttons, WhatsApp catalogue link, animated counters
-- **About** — anchor CTAs, feature list
-- **Collections** — category filters + 6 product cards, each with a WhatsApp enquiry link pre-filled for that product, plus Instagram catalogue link
-- **Services** — 6 cards, each linking to a pre-filled WhatsApp message
-- **Reviews** — Google Maps link to the store location
-- **CTA banner** — WhatsApp appointment booking + `tel:` call button
-- **Contact** — showroom directions (Google Maps), phone, WhatsApp, website; enquiry form that opens WhatsApp with the message pre-composed
-- **Bank transfer** — MCB IBAN card with one-tap **Copy IBAN** and an **Open Bank App** button that launches the MCB Live app on the customer's phone (with store-page fallback), plus a "Paid already?" WhatsApp button for payment proof
-- **Footer** — quick links (incl. website), collection links, contact links, newsletter, policy modals (Privacy / Terms / Exchange & Returns)
-- **Floating** — WhatsApp chat bubble + back-to-top button
+## Tests
 
-## Notes
+Run the local content and navigation checks with:
 
-- No dependencies, no build step; deploy by uploading `index.html` + `assets/` (this repo is hosted on GitHub Pages).
-- Every WhatsApp button opens a chat with a pre-filled message relevant to the button you clicked.
+```sh
+python3 -m unittest discover -s tests -v
+node --test tests/test_site_js.mjs
+```
